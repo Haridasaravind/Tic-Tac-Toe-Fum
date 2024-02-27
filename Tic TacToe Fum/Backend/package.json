@@ -1,0 +1,45 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Server.js",
+  "scripts": {
+    "start": "node Server.js",
+    "start:dev": "nodemon Server.js",
+    "test": "mocha",
+    "test:coverage": "nyc mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.2",
+    "nyc": "^15.1.0"
+  },
+  "nyc": {
+    "include": [
+      "Server.js"
+    ],
+    "exclude": [
+      "test.js"
+    ],
+    "reporter": [
+      "lcov",
+      "html"
+    ],
+    "all": true,
+    "statements": 100,
+    "branches": 100,
+    "functions": 100,
+    "lines": 100
+  }
+}

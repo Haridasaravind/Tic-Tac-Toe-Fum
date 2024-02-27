@@ -1,0 +1,64 @@
+/* src/App.css */
+/*
+   Base styling for the entire document body, 
+   setting font-family, text alignment,
+   margin, height, and background color using a linear gradient.
+ */
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4a47a3, #c4c1e3);
+}
+/*
+   Styling for the main container that holds the game board, 
+   including a white background, border-radius, padding, and a subtle box shadow.
+ */
+.container {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+/*Styling for the grid rows of the game board, using grid display,
+  defining column templates, specifying the gap 
+  between columns, setting margins, and adjusting 
+  the max-width to accommodate the extra column for a 4x4 board.
+ */
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 100px); /* Adjusted to 4 columns for the 4x4 board */
+  gap: 5px;
+  margin: 20px auto;
+  max-width: 400px; /* Adjusted max-width to accommodate the extra column */
+}
+/*Styling for individual cells within the game board, setting dimensions, 
+  background color, flex properties for centering content, 
+  font size, border, cursor, margin, and a transition
+  effect for background color changes.rd.
+ */
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  border: 1px solid #000;
+  cursor: pointer;
+  margin: 2px;
+  transition: background-color 0.3s;
+}
+/*Styling for the hover effect on cells, changing the background color 
+  to a lighter shade when the cell is hovered over.
+ */
+.cell:hover {
+  background: #f2f2f2;
+}
+
+
